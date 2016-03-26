@@ -35,7 +35,7 @@ $resPage = new WP_Query("page_id=2");
 			</div>
 
 			<?php if ($resPage->have_posts()): $resPage->the_post(); ?>
-			<div class="row columns contentHome">
+			<div class="row columns content" id="contentHome">
 				<h3><?php the_title(); ?></h3>
 				<div id="contentIntro">
 				    <?php the_content(); ?>

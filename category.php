@@ -3,7 +3,7 @@ get_header();
 global $wp_query;
 ?>
 <br class="show-for-medium">
-<div class="row columns contentCategory">
+<div class="row columns content" id="contentCategory">
 	<h2><?php echo single_cat_title(); ?></h2>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="item">

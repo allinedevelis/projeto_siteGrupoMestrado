@@ -8,7 +8,7 @@
 						</figure>
 					</div>
 					<div id="direitosReservados" class="columns small-8 medium-4 medium-offset-1 medium-text-center" data-equalizer-watch>
-						<div class="content">
+						<div class="contentCopyright">
 							<p>GMMS - Grupo de Modelagem em Mecânica dos Sólidos</p>
 							<small>Todos os direitos reservados© 2016-<?php echo date('Y');?></small>
 						</div>
