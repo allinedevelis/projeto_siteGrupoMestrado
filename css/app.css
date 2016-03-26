@@ -1,0 +1,16 @@
+#searchFrm{
+	position: relative;
+}
+.iconFinder{
+	color: #444;
+    right: 5px;
+    position: absolute;
+    top: 0;
+}
+.fa-search{
+    color: #444;
+    font-size: 1.125em !important;
+}
+#logos {
+    background-color: #FFE4B5;
+}

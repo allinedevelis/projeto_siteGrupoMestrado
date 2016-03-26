@@ -1,0 +1,237 @@
+<!doctype html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="css/foundation-flex.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+  </head>
+  <body>
+   <h3>HTML Menu</h3>
+    <ul class="vertical menu">
+      <li class="menu-text">Foundation - Menu 1 (Simples)</li>
+      <li>
+        <a href="#"><i class="fi-list"></i><span>Item One</span></a>
+        <ul class="nested menu vertical">
+          <li><a href="#">Item One-one</a></li>
+           <li><a href="#">Item One-two</a></li>
+            <li><a href="#">Item One-three</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fi-list"></i><span>Item Two</span></a></li>
+      <li><a href="#"><i class="fi-list"></i><span>Item Three</span></a></li>
+    </ul>
+
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">Foundation - Menu 2 (Dropdown)</li>
+      <li>
+        <a href="#"><i class="fi-list"></i><span>Item One</span></a>
+        <ul class="nested menu vertical">
+          <li><a href="#">Item One-one</a>
+            <ul class="nested menu vertical">
+              <li><a href="#">Item One-one-1</a></li>
+              <li><a href="#">Item One-one-2</a></li>
+            </ul>
+          </li>
+           <li><a href="#">Item One-two</a></li>
+            <li><a href="#">Item One-three</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fi-list"></i><span>Item Two</span></a></li>
+      <li><a href="#"><i class="fi-list"></i><span>Item Three</span></a></li>
+    </ul>
+
+    <ul class="vertical menu" data-drilldown data-options="backButton:<li class='js-drilldown-back'><a>Voltar</a></li>;">
+      <li class="menu-text">Foundation - Menu 3 (Drilldown)</li>
+      <li>
+        <a href="#"><i class="fi-list"></i><span>Item One</span></a>
+        <ul class="nested menu vertical">
+          <li><a href="#">Item One-one</a>
+            <ul class="nested menu vertical">
+              <li><a href="#">Item One-one-1</a></li>
+              <li><a href="#">Item One-one-2</a></li>
+            </ul>
+          </li>
+           <li><a href="#">Item One-two</a></li>
+          <li><a href="#">Item One-three</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fi-list"></i><span>Item Two</span></a></li>
+      <li><a href="#"><i class="fi-list"></i><span>Item Three</span></a>
+          <ul class="vertical menu">
+            <li><a href="">Item Three-1</a></li>
+            <li><a href="">Item Three-2</a></li>
+            <li><a href="">Item Three-3</a></li>
+          </ul>
+      </li>
+    </ul>
+
+    <ul class="vertical menu" data-accordion-menu>
+      <li class="menu-text">Foundation - Menu 4 (Accordion Menu)</li>
+      <li>
+        <a href="#"><i class="fi-list"></i><span>Item One</span></a>
+        <ul class="nested menu vertical">
+          <li><a href="#">Item One-one</a>
+            <ul class="nested menu vertical">
+              <li><a href="#">Item One-one-1</a></li>
+              <li><a href="#">Item One-one-2</a></li>
+            </ul>
+          </li>
+           <li><a href="#">Item One-two</a></li>
+          <li><a href="#">Item One-three</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fi-list"></i><span>Item Two</span></a></li>
+      <li><a href="#"><i class="fi-list"></i><span>Item Three</span></a>
+          <ul class="nested vertical menu">
+            <li><a href="">Item Three-1</a></li>
+            <li><a href="">Item Three-2</a></li>
+            <li><a href="">Item Three-3</a></li>
+          </ul>
+      </li>
+    </ul>
+    <hr>
+
+    <h3>HTML Top Bar</h3>
+    <div class="top-bar">
+      <div class="top-bar-title">Foundation - Top bar</div>
+      <div>
+        <div class="top-bar-left">
+          Left
+        </div>
+        <div class="top-bar-right">
+          Right
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="top-bar">
+      <div class="top-bar-title">Foundation - Top bar + dropdown menu</div>
+      <div>
+        <div class="top-bar-left">
+          <ul class="vertical medium-horizontal dropdown menu" data-dropdown-menu>
+            <li class="menu-text">Foundation - Top Bar</li>
+            <li>
+              <a href="#">One</a>
+              <ul class="nested menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li><input type="search" placeholder="Search"></li>
+            <li><button type="button" class="button">Search</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="top-bar">
+        <div class="top-bar-title">
+          <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+            <span class="menu-icon dark" data-toggle></span>
+          </span>
+          <strong>Foundation (TopBar) + Resp dropdown menu</strong>
+        </div>
+        <div id="responsive-menu">
+          <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+              <li>
+                <a href="#">One</a>
+                <ul class="menu vertical">
+                  <li><a href="#">One</a></li>
+                  <li><a href="#">Two</a></li>
+                  <li><a href="#">Three</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Two</a></li>
+              <li><a href="#">Three</a></li>
+            </ul>
+          </div>
+          <div class="top-bar-right">
+            <ul class="menu">
+              <li><input type="search" placeholder="Search"></li>
+              <li><button type="button" class="button">Search</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <h3>Menu Responsive (Drilldown - small / Dropdown - medium/large)</h3>
+      <ul class="vertical medium-horizontal menu" data-responsive-menu="drilldown medium-dropdown" style="width:200px;">
+        <li>
+          <a href="#">One</a>
+          <ul class="menu vertical">
+            <li><a href="#">One</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a>
+                <ul class="menu vertical">
+                  <li><a href="#">Three - 1</a></li>
+                  <li><a href="#">Three - 2</a></li>
+                  <li><a href="#">Three - 3</a></li>
+                </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Menu</a>
+            <ul class="menu vertical">
+                  <li><a href="#">Menu - 1</a></li>
+                  <li><a href="#">Menu - 2</a></li>
+                  <li><a href="#">Menu - 3</a></li>
+                </ul>
+        </li>
+        <li><a href="#">Three</a></li>
+      </ul>    
+      <hr>
+
+      <h3>Menu Responsive (Drilldown - small / Dropdown - medium/large) - Menu Sanduiche</h3>
+      <div class="title-bar" data-responsive-toggle="navMenu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">Menu</div>
+      </div>
+      <ul id="navMenu" class="vertical medium-horizontal menu" data-responsive-menu="drilldown medium-dropdown" style="width:300px;">
+        <li>
+          <a href="#">One</a>
+          <ul class="menu">
+            <li><a href="#">One</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a>
+                <ul class="menu">
+                  <li><a href="#">Three - 1</a></li>
+                  <li><a href="#">Three - 2</a></li>
+                  <li><a href="#">Three - 3</a></li>
+                </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Menu</a>
+            <ul class="menu">
+                  <li><a href="#">Menu - 1</a></li>
+                  <li><a href="#">Menu - 2</a></li>
+                  <li><a href="#">Menu - 3</a></li>
+                </ul>
+        </li>
+        <li><a href="#">Three</a></li>
+      </ul>    
+    
+
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

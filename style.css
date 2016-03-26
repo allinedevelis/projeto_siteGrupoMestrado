@@ -1,0 +1,261 @@
+/*
+Theme Name: GMMS
+Author: Alline
+Description: Tema responsivo desenvolvido com Foundation para o Grupo de Mestrado GMMS - Unesp / Bauru.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: gmms
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/**
+ * Table of Contents
+ *
+ * 1.0 - Reset
+ * 2.0 - Header
+ * 	2.1 - Nav
+ *	2.2 - Nav off-canvas
+ * 3.0 - Content
+ *	3.1 - Home
+ * 	3.2 - Singular
+ *	3.3 - Category
+ * 4.0 - Footer
+ * 5.0 - Media queries
+ *
+ */
+
+/**
+* 1.0 - Reset
+*/
+
+a{
+	display: block;
+}
+ul li{
+	list-style: none;
+}
+body .off-canvas-content{
+	background: url(img/backgroundSite.jpg);
+}
+
+/**
+* 2.0 - Header
+*/
+
+#searchBar{
+	padding: 8px;
+}
+#searchBar, #searchBar a, #contentFooter, #contentFooter a, #mainMenu, #mainMenu a{
+	color: #FFF;
+}
+#searchBar, #searchBar ul, #contentFooter {
+    background-color: #1792b1;
+}
+#searchBar .columns > a {
+    float: left;
+    text-align: center;
+    display: block;
+}
+#searchBar div.contato {
+	border-left: 1px solid #FFF;
+	display: table;
+}
+#searchBar div.contato > div{
+	display: table-cell;
+	vertical-align: middle;
+}
+#searchBar div.contato > div a{
+	float: left;
+}
+#searchBar div.contato > div i.fa.fa-envelope-o {
+    font-size: 1.75em;
+    margin-right: 10px;
+}
+.searchForm{
+	display: table;
+}
+.searchForm > div{
+	display: table-cell;
+	vertical-align: middle;
+}
+#frmSearch .search-field{
+	margin-bottom: 0;
+}
+#frmSearch{
+	position: relative;
+}
+#frmSearch #btnSearch{
+	position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+.iconsApoio > div {
+    margin-right: 2px;
+}
+.iconsApoio > div:last-child {
+	margin-right: 0;
+}
+div#boxLogos {
+    margin: 0 auto;
+    background-color: #eee;
+    padding: 20px;
+}
+#boxLogos img{
+	max-width: 70%;
+}
+
+/**
+* 2.1 - Nav
+*/
+
+.sticky{
+	width: 100%;
+	z-index: 2;
+}
+#mainMenu, #mainMenu ul{
+	background-color: #E43107;
+}
+#mainMenu > ul{
+	position: relative;
+}
+#mainMenu .is-dropdown-submenu-parent.is-down-arrow > a::after{
+	border-color: #FFF rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+}
+#mainMenu .is-dropdown-submenu{
+	top: 40px;
+	left: 20%;
+	border: none;
+}
+
+/**
+* 2.2 - Nav off-canvas
+*/
+
+#menuOffCanvas .is-drilldown-submenu-parent > a::after{
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #FFF;
+}
+#menuOffCanvas .is-drilldown-submenu .js-drilldown-back > a::before{
+	border-color: rgba(0, 0, 0, 0) #FFF rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+}
+ul#menuOffCanvas > li a {
+    color: #FFF;
+}
+#offCanvas, #menuOffCanvas, #menuOffCanvas .is-drilldown-submenu{
+	background-color: #0a0a0a;
+	height: 100%;
+}
+.closeMenu {
+	color: #FFF;
+	font-size: 1.5625em;
+}
+.closeMenu .fa-times{
+	padding-right: 10px;
+}
+#anchortop{
+	position: absolute;
+	top: 205px; 
+}
+
+/**
+* 3.0 - Content
+*/
+
+/* 3.1 - Home */
+#contentIntro .alignleft {
+    float: left;
+    margin-right: 10px;
+}
+#contentIntro .alignright {
+    float: right;
+    margin-left: 10px;
+}
+#contentIntro .aligncenter {
+    width: 100%;
+    margin: 0 auto;
+}
+div.contentHome, div.contentSingular, div.contentCategory, div.contentSingle {
+    background-color: #FFF;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* 3.2 - Singular */
+div.contentSingular, div.contentSingle{
+	margin-top: 15px;
+}
+
+/* 3.3 - Category */
+.item {
+    float: left;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.contentCategory .itemImg {
+    float: right;
+    margin-left: 10px;
+}
+.contentCategory h2, .contentSingular h2{
+	background-color: #1792B1;
+    color: #FFF;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.contentCategory hr{
+	border-color: #E6E6E6;
+}
+.contentCategory hr:last-child{
+	display: none;
+}
+
+/**
+* 4.0 - Footer
+*/
+
+#contentFooter{
+	padding: 10px;
+}
+#contentFooter #direitosReservados{
+	display: table;
+}
+#contentFooter #direitosReservados .content{
+	display: table-cell;
+	vertical-align: middle;
+}
+#contentFooter #direitosReservados .content p{
+	margin-bottom: 0;
+}
+
+/**
+* 5.0 - Media queries
+*/
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+	#searchBar div.contato {
+		border-left: none;
+	}
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+	#searchBar > div{
+		padding: 0;
+	}
+	.iconsApoio img{
+		width: 60%;
+	}
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+
+/* Large and up */
+@media screen and (min-width: 64em) {}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
