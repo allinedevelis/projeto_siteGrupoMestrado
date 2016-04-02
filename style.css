@@ -219,6 +219,9 @@ div.content{
     margin-bottom: 20px;
     text-align: center;
 }
+#contentCategory h3{
+	color: #FF4500;
+}
 .#ontentCategory hr{
 	border-color: #E6E6E6;
 }

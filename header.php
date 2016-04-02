@@ -59,25 +59,20 @@
 				<div id="searchBar" class="row expanded"  data-equalizer data-equalize-on="medium">
 					<div class="columns medium-9 large-8 show-for-medium">
 						<div class="row">
-							<div class="columns small-12 medium-7 large-5 iconsApoio" data-equalizer-watch>
-								<div class="row medium-collapse">
-								  <div class="columns">
-								    <a href="#"><img src="<?php bloginfo('template_url')?>/img/LOGO_UNESP_61x61.png" alt="Logo UNESP"></a>
-								    <a href="#"><img src="<?php bloginfo('template_url')?>/img/LOGO_USP_61x61.png" alt="Logo USP"></a>
-								    <a href="#"><img src="<?php bloginfo('template_url')?>/img/LOGO_UFPE_61x61.png" alt="Logo UFPE"></a>
-								    <a href="#"><img src="<?php bloginfo('template_url')?>/img/LOGO_TAMU_61x61.png" alt="Logo TAMU"></a>
-								  </div>
-								  <!--<div class="row medium-collapse small-up-4">
-								  <div class="columns">
-								    <a href="#"><img src="<?php bloginfo('template_url')?>/img/LOGO_USP_61x61.png" alt="Logo USP"></a>
-								  </div>
-								  <div class="columns">
-								    <a href="#"><img src="<?php bloginfo('template_url')?>/img/LOGO_UFPE_61x61.png" alt="Logo UFPE"></a>
-								  </div>
-								  <div class="columns">
-								    <a href="#"><img src="<?php bloginfo('template_url')?>/img/LOGO_TAMU_61x61.png" alt="Logo TAMU"></a>
-								  </div>
-								  </div>-->
+							<div class="columns small-12 medium-6 large-4 iconsApoio" data-equalizer-watch>
+								  <div class="row medium-collapse small-up-4">
+									  <div class="columns">
+									    <a href="http://www.unesp.br/" target="_blank" title="Universidade Estadual Paulista"><img src="<?php bloginfo('template_url')?>/img/LOGO_UNESP_61x61.png" alt="Logo UNESP"></a>
+									  </div>
+									  <div class="columns">
+									    <a href="http://www5.usp.br/" target="_blank" title="Universidade de São Paulo"><img src="<?php bloginfo('template_url')?>/img/LOGO_USP_61x61.png" alt="Logo USP"></a>
+									  </div>
+									  <div class="columns">
+									    <a href="https://www.ufpe.br/" target="_blank" title="Universidade Federal de Pernambuco"><img src="<?php bloginfo('template_url')?>/img/LOGO_UFPE_61x61.png" alt="Logo UFPE"></a>
+									  </div>
+									  <div class="columns">
+									    <a href="https://www.tamu.edu/" target="_blank" title="Texas A&M University"><img src="<?php bloginfo('template_url')?>/img/LOGO_TAMU_61x61.png" alt="Logo TAMU"></a>
+									  </div>
 								</div>
 							</div>
 							<div class="columns contato medium-5 large-5 end" data-equalizer-watch>
@@ -123,23 +118,5 @@
 							wp_nav_menu( $argsMenu ); 
 						}
 						?>
-
-						<!--<nav class="top-bar" id="mainMenu">
-							<ul class="menu horizontal expanded medium-text-center" data-dropdown-menu>
-								<li><a href="#">Home</a></li>
-								<li><a href="#">Linhas de Pesquisa</a></li>
-								<li><a href="#">Projetos</a></li>
-								<li><a href="#">Publicações</a>
-									<ul class="menu vertical medium-text-left" data-submenu>
-										<li><a href="#">Artigos - Congressos</a></li>
-										<li><a href="#">Artigos - Revistas</a></li>
-										<li><a href="#">Dissertações</a></li>
-										<li><a href="#">Teses</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Equipe</a></li>
-								<li><a href="#">Contato</a></li>
-							</ul>
-						</nav>-->
 					</div>
 				</div>
