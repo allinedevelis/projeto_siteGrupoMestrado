@@ -8,7 +8,7 @@ the_post();
 		yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 	} ?>
 	<h2><?php the_title(); ?></h2>
-	<div id="contentIntro">
+	<div class="contentIntro">
 	    <?php the_content(); ?>
 	</div>
 </div>

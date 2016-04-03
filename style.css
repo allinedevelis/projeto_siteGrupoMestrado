@@ -22,6 +22,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  *	3.1 - Home
  * 	3.2 - Singular
  *	3.3 - Category
+ *  3.4 - Search
  * 4.0 - Footer
  * 5.0 - Media queries
  *
@@ -33,6 +34,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 a{
 	display: block;
+	color: inherit;
 }
 ul li{
 	list-style: none;
@@ -166,17 +168,17 @@ ul#menuOffCanvas > li a {
 */
 
 /* 3.1 - Home */
-#contentIntro .alignleft {
+.contentIntro .alignleft {
     float: left;
     margin-right: 10px;
     margin-top: 5px;
 }
-#contentIntro .alignright {
+.contentIntro .alignright {
     float: right;
     margin-left: 10px;
     margin-top: 5px;
 }
-#contentIntro .aligncenter {
+.contentIntro .aligncenter {
     width: 100%;
     margin: 0 auto;
 }
@@ -184,7 +186,8 @@ div.content {
     background-color: #FFF;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 5px;
+    box-shadow: 3px 7px 10px #8a8a8a;
+    margin-top: 15px;
 }
 
 /* 3.2 - Singular */
@@ -192,26 +195,28 @@ div.content {
     display: inline-block;
     color: #FF4500;
 }
-.content a:hover, .content #breadcrumbs a:hover{
+.content #breadcrumbs a:hover{
 	text-decoration: underline;
 }
-div.content{
-	margin-top: 15px;
-}
-.content div#contentIntro {
+
+.content div.contentIntro {
+	border-top: 1px solid #B4B9BE;
+	display: table;
     padding-top: 15px;
-    border-top: 1px solid #B4B9BE;
+}
+#contentSingle div.infoPost p {
+    font-size: 0.875em;
 }
 
 /* 3.3 - Category */
 .item {
-    float: left;
-    margin-bottom: 15px;
+    float: left !important;
+    margin-bottom: 35px;
     width: 100%;
 }
-#contentCategory .itemImg {
+.itemImg {
     float: right;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 #contentCategory h2{
 	background-color: #1792B1;
@@ -219,14 +224,20 @@ div.content{
     margin-bottom: 20px;
     text-align: center;
 }
-#contentCategory h3{
-	color: #FF4500;
+
+/* 3.4 - Search */
+#pageSearch .contentIntro {
+    display: table;
 }
-.#ontentCategory hr{
-	border-color: #E6E6E6;
+.itemCat {
+    color: #1792B1;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 5px;
+    border-bottom: 3px solid #1792B1;
 }
-#contentCategory hr:last-child{
-	display: none;
+.itemCat a {
+    display: inline-block;
 }
 
 /**

@@ -14,11 +14,14 @@ global $wp_query;
 					</a>
 				</div>
 			<?php endif; ?>
-			<h3><?php the_title();?></h3>
-			<?php the_excerpt(); ?>
-			<a href="<?php echo get_permalink();?>" class="button">Mais Informações</a>		
+			<div class="itemContent">
+				<h3><?php the_title();?></h3>
+				<div class="contentIntro">
+					<?php the_excerpt(); ?>
+				</div>
+				<a href="<?php echo get_permalink();?>" class="button alert">Mais Informações</a>		
+			</div>
 		</div>
-		<hr>
 	<?php endwhile;
 	endif; 
 	if (function_exists('wp_pagenavi'))

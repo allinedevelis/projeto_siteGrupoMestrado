@@ -36,23 +36,6 @@
 				wp_nav_menu( $argsMenuOffCanvas ); 
 			}
 			?>
-
-			<!--<ul id="menuOffCanvas" class="hide menu vertical" data-drilldown data-back-button="<li class='js-drilldown-back'><a><strong>Voltar</strong></a></li>">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Linhas de Pesquisa</a></li>
-				<li><a href="#">Projetos</a></li>
-				<li><a href="#">Publicações</a>
-					<ul class="menu vertical">
-						<li><a href="#">Artigos - Congressos</a></li>
-						<li><a href="#">Artigos - Revistas</a></li>
-						<li><a href="#">Dissertações</a></li>
-						<li><a href="#">Teses</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Equipe</a></li>
-				<li><a href="#">Contato</a></li>
-			</ul>-->
-
 		</div>
 		<div class="off-canvas-content" data-off-canvas-content>
 			<header>
