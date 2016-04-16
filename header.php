@@ -55,9 +55,6 @@
 							wp_nav_menu( $argsMenu ); 
 						}
 						?>
-						<div class="searchContent">
-							<?php get_search_form(); ?>
-						</div>
 					</div>
 				</div>
 				<div id="searchBar" class="row expanded"  data-equalizer data-equalize-on="medium">
@@ -87,7 +84,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="hide-for-medium columns small-12 medium-3 large-4 searchForm" data-equalizer-watch>
+					<div class="columns small-12 medium-3 large-4 searchForm" data-equalizer-watch>
 						<div><?php get_search_form(); ?></div>
 					</div>
 				</div>
