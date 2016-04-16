@@ -7,21 +7,30 @@
 							<a href="#"><img src="<?php bloginfo('template_url')?>/img/logoGMMS-iniciais.png" alt="Logo GMMS"></a>
 						</figure>
 					</div>
-					<div id="direitosReservados" class="columns small-8 medium-4 medium-offset-1 medium-text-center" data-equalizer-watch>
+					<div id="direitosReservados" class="columns small-8 medium-4 medium-text-center" data-equalizer-watch>
 						<div class="contentCopyright">
 							<p>GMMS - Grupo de Modelagem em Mecânica dos Sólidos</p>
 							<small>Todos os direitos reservados© 2016-<?php echo date('Y');?></small>
 						</div>
-
 					</div>
-					<div class="columns medium-5 medium-text-right" data-equalizer-watch>
-						<p>
-						<strong>FEB - Faculdade de Engenharia</strong><br/>
-						Av. Eng. Luiz Edmundo C. Coube 14-01<br/>
-							Bairro: Vargem Limpa<br/>
-							CEP 17033-360 / Bauru - SP</br/>
-							Telefone: (14) 3103-6000</p>
-						<p class="hide-for-large"><strong>Contato: </strong>gmms.feb@gmail.com</p>
+					<div class="columns medium-6 medium-text-right" data-equalizer-watch>
+						<div class="row">
+							<div class="columns medium-6">
+								<p>
+								<strong>FEB - Faculdade de Engenharia</strong><br/>
+								Av. Eng. Luiz Edmundo C. Coube 14-01<br/>
+								Bairro: Vargem Limpa
+								</p>
+							</div>
+							<div class="columns medium-6">
+								<p>CEP 17033-360 <br/> 
+								Bauru - SP<br/>
+								Telefone: (14) 3103-6000</p>	
+							</div>
+						</div>	
+						<p class="hide-for-large">
+							<strong>Contato: </strong>gmms.feb@gmail.com
+						</p>
 					</div>
 				</div>
 			</footer>			

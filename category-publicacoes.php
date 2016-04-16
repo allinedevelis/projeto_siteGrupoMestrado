@@ -21,7 +21,7 @@ $resTeses 				= new WP_Query($argsTeses);
 	<h2><?php echo single_cat_title(); ?></h2>
 	<?php 
 	if ($resArtigosCongressos->have_posts()) : ?>
-		<div class="row contentPublicacoes">	
+		<div class="row contentPublicacoes" data-equalizer data-equalize-on="medium">	
 			<h3>Artigos - Congressos</h3>
 		<?php while ($resArtigosCongressos->have_posts()) : 
 				$resArtigosCongressos->the_post(); 
@@ -29,14 +29,16 @@ $resTeses 				= new WP_Query($argsTeses);
 				$end 			= ($currentPost == $resArtigosCongressos->found_posts) ? 'end' : '';
 		?>
 			<div class="columns small-12 medium-6 large-4 <?php echo $end;?>">
-				<?php if (has_post_thumbnail()) : ?>
-				<div class="itemImg">
-					<a href="<?php echo get_permalink();?>" title="<?php the_title();?>">
-						<?php the_post_thumbnail('thumb-category'); ?>
-					</a>
+				<div data-equalizer-watch>
+					<?php if (has_post_thumbnail()) : ?>
+					<div class="itemImg">
+						<a href="<?php echo get_permalink();?>" title="<?php the_title();?>">
+							<?php the_post_thumbnail('thumb-category'); ?>
+						</a>
+					</div>
+				<?php endif; ?>
+					<h4><a href="<?php echo get_permalink();?>"><?php the_title();?></a></h4>
 				</div>
-			<?php endif; ?>
-				<h4><a href="<?php echo get_permalink();?>"><?php the_title();?></a></h4>
 			</div>
 		<?php endwhile; 
 		if ($resArtigosCongressos->found_posts > 3) : ?>
@@ -47,7 +49,7 @@ $resTeses 				= new WP_Query($argsTeses);
 
 	<?php 
 	if ($resArtigosRevistas->have_posts()) : ?>
-		<div class="row contentPublicacoes">	
+		<div class="row contentPublicacoes" data-equalizer data-equalize-on="medium">	
 			<h3>Artigos - Revistas</h3>
 		<?php while ($resArtigosRevistas->have_posts()) : 
 				$resArtigosRevistas->the_post(); 
@@ -55,14 +57,16 @@ $resTeses 				= new WP_Query($argsTeses);
 				$end 			= ($currentPost == $resArtigosRevistas->found_posts) ? 'end' : '';
 		?>
 			<div class="columns small-12 medium-6 large-4 <?php echo $end;?>">
-				<?php if (has_post_thumbnail()) : ?>
-				<div class="itemImg">
-					<a href="<?php echo get_permalink();?>" title="<?php the_title();?>">
-						<?php the_post_thumbnail('thumb-category'); ?>
-					</a>
+				<div data-equalizer-watch>
+					<?php if (has_post_thumbnail()) : ?>
+					<div class="itemImg">
+						<a href="<?php echo get_permalink();?>" title="<?php the_title();?>">
+							<?php the_post_thumbnail('thumb-category'); ?>
+						</a>
+					</div>
+				<?php endif; ?>
+					<h4><a href="<?php echo get_permalink();?>"><?php the_title();?></a></h4>
 				</div>
-			<?php endif; ?>
-				<h4><a href="<?php echo get_permalink();?>"><?php the_title();?></a></h4>
 			</div>
 		<?php endwhile; 
 		if ($resArtigosRevistas->found_posts > 3) : ?>
@@ -73,7 +77,7 @@ $resTeses 				= new WP_Query($argsTeses);
 
 	<?php 
 	if ($resDissertacoes->have_posts()) : ?>
-		<div class="row contentPublicacoes">
+		<div class="row contentPublicacoes" data-equalizer data-equalize-on="medium">
 			<h3>Dissertações</h3>	
 		<?php while ($resDissertacoes->have_posts()) : 
 				$resDissertacoes->the_post(); 
@@ -81,14 +85,16 @@ $resTeses 				= new WP_Query($argsTeses);
 				$end 			= ($currentPost == $resDissertacoes->found_posts) ? 'end' : '';
 		?>
 			<div class="columns small-12 medium-6 large-4 <?php echo $end;?>">
-				<?php if (has_post_thumbnail()) : ?>
-				<div class="itemImg">
-					<a href="<?php echo get_permalink();?>" title="<?php the_title();?>">
-						<?php the_post_thumbnail('thumb-category'); ?>
-					</a>
+				<div data-equalizer-watch>
+					<?php if (has_post_thumbnail()) : ?>
+					<div class="itemImg">
+						<a href="<?php echo get_permalink();?>" title="<?php the_title();?>">
+							<?php the_post_thumbnail('thumb-category'); ?>
+						</a>
+					</div>
+				<?php endif; ?>
+					<h4><a href="<?php echo get_permalink();?>"><?php the_title();?></a></h4>
 				</div>
-			<?php endif; ?>
-				<h4><a href="<?php echo get_permalink();?>"><?php the_title();?></a></h4>
 			</div>
 		<?php endwhile; 
 		if ($resDissertacoes->found_posts > 3) : ?>
@@ -99,7 +105,7 @@ $resTeses 				= new WP_Query($argsTeses);
 
 	<?php 
 	if ($resTeses->have_posts()) : ?>
-		<div class="row contentPublicacoes">	
+		<div class="row contentPublicacoes" data-equalizer data-equalize-on="medium">	
 			<h3>Teses</h3>
 		<?php while ($resTeses->have_posts()) : 
 				$resTeses->the_post(); 
@@ -107,14 +113,16 @@ $resTeses 				= new WP_Query($argsTeses);
 				$end 			= ($currentPost == $resTeses->found_posts) ? 'end' : '';
 		?>
 			<div class="columns small-12 medium-6 large-4 <?php echo $end;?>">
-				<?php if (has_post_thumbnail()) : ?>
-				<div class="itemImg">
-					<a href="<?php echo get_permalink();?>" title="<?php the_title();?>">
-						<?php the_post_thumbnail('thumb-category'); ?>
-					</a>
+				<div data-equalizer-watch>
+					<?php if (has_post_thumbnail()) : ?>
+					<div class="itemImg">
+						<a href="<?php echo get_permalink();?>" title="<?php the_title();?>">
+							<?php the_post_thumbnail('thumb-category'); ?>
+						</a>
+					</div>
+				<?php endif; ?>
+					<h4><a href="<?php echo get_permalink();?>"><?php the_title();?></a></h4>
 				</div>
-			<?php endif; ?>
-				<h4><a href="<?php echo get_permalink();?>"><?php the_title();?></a></h4>
 			</div>
 		<?php endwhile; 
 		if ($resTeses->found_posts > 3) : ?>

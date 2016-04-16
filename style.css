@@ -42,6 +42,10 @@ ul li{
 body .off-canvas-content{
 	background: url(img/backgroundSite.jpg);
 	color: #5F5F5F;
+	font-family: 'Oxygen', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Oxygen', sans-serif;
 }
 
 /**
@@ -121,6 +125,7 @@ div#boxLogos {
 }
 #mainMenu{
 	float: left;
+	font-family: 'Oxygen', sans-serif;
 }
 #mainMenu, #mainMenu ul, .sticky, .sticky-container{
 	background-color: #E43107;
@@ -133,7 +138,7 @@ div#boxLogos {
 }
 #mainMenu .is-dropdown-submenu{
 	top: 40px;
-	left: 5%;
+	left: 15%;
 	border: none;
 }
 
@@ -181,11 +186,18 @@ ul#menuOffCanvas > li a {
     width: 100%;
     margin: 0 auto;
 }
+#contentHome .contentIntro p, #contentSingular .contentIntro p {
+    max-height: none;
+    overflow: initial;
+}
 div.content {
     background-color: #FFF;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 3px 7px 10px #8a8a8a;
+}
+.content p{
+	font-family: 'Oxygen', sans-serif;
 }
 
 /* 3.2 - Singular */
@@ -220,35 +232,54 @@ div.content {
 	color: #E43107;
     margin-left: 10px;
 }
-#contentCategory .contentPublicacoes .itemImg:hover + h4 > a{
+#contentCategory .contentPublicacoes > div{
+	margin-bottom: 20px;
+}
+.itemImg:hover + h4 > a{
 	color: #1585cf;
 }
 #contentCategory h2{
     margin-bottom: 20px;
 }
-#contentCategory .contentIntro p {
+.contentIntro p {
     max-height: 150px;
     overflow: hidden;
 }
-.navPagenavi{
+.paginacaoPosts{
 	clear: both;
 }
-
-/* 3.4 - Search */
-#pageSearch .contentIntro {
-    display: table;
+.paginacaoPosts .pagination{
+	text-align: center;
 }
-.itemCat {
+.paginacaoPosts .pagination .screen-reader-text{
+	display: none;
+}
+.paginacaoPosts .pagination .nav-links{
+	display: inline-block;
+}
+.paginacaoPosts .pagination .nav-links *{
+	float: left;
+}
+/* 3.4 - Search */
+#pageSearch .itemCat {
     color: #1792B1;
     font-weight: bold;
     display: inline-block;
     margin-bottom: 5px;
-    border-bottom: 3px solid #1792B1;
 }
-.itemCat a {
+#pageSearch .itemCat a {
     display: inline-block;
 }
-
+#pageSearch .itemCat a:hover{
+	text-decoration: underline;
+}
+#pageSearch .resultSearch {
+    margin-top: 20px;
+    display: inline-block;
+}
+#pageSearch .resultSearch .button{
+	margin-bottom: 0;
+}
 /**
 * 4.0 - Footer
 */
@@ -289,7 +320,11 @@ div.content {
 }
 
 /* Medium only */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+	#mainMenu .is-dropdown-submenu{
+		left: -20%;
+	}
+}
 
 /* Large and up */
 @media screen and (min-width: 64em) {

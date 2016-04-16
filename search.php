@@ -1,32 +1,59 @@
-<?php get_header(); ?>
+<?php 
+get_header(); 
+global $wp_query;
+
+$paged 			= (get_query_var('paged')) ? get_query_var('paged') : 1;
+$argsDefault 	= array("post_status" => "publish", "posts_per_page" => 9, "paged" => $paged);
+$argsSearch 	= array_merge($wp_query->query_vars, $argsDefault);
+$resSearch 		= new WP_Query($argsSearch);
+?>
 <br class="show-for-medium">
-<div class="row content" id="pageSearch">
+<div class="row content" data-equalizer data-equalize-on="medium" id="pageSearch">
 	<?php if ( function_exists('yoast_breadcrumb') ){
 		yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-	} 
-	if (have_posts()) : while (have_posts()) : the_post(); ?>
-	<div class="columns medium-6">
-		<div class="itemCat">Em <?php the_category(" | "); ?></div>
-		<?php if (has_post_thumbnail()) : ?>
-		<div class="">
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-				<?php the_post_thumbnail('thumb-category'); ?>	
-			</a>
+	} ?>
+	<h2>Busca por: <strong><?php the_search_query(); ?></strong></h2>
+	<div class="resultSearch">
+		<?php
+		if ($resSearch->have_posts()) : while ($resSearch->have_posts()) : 
+			$resSearch->the_post(); 
+			$currentPost 	= ($resSearch->current_post + 1);
+			$end 			= ($currentPost == $resSearch->found_posts) ? 'end' : '';
+		?>
+		<div class="columns small-12 medium-6 large-4 itemSearch <?php echo $end; ?>">
+			<div data-equalizer-watch>
+				<div class="itemCat"><?php the_category(", "); ?></div>
+				<?php if (has_post_thumbnail()) : ?>
+					<div class="itemImg">
+						<a href="<?php echo get_permalink();?>" title="<?php the_title();?>">
+							<?php the_post_thumbnail('thumb-category'); ?>
+						</a>
+					</div>
+				<?php endif; ?>
+				<h4>
+					<a href="<?php echo get_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a>
+				</h4>
+				<div class="contentIntro">
+					<?php the_excerpt(); ?>
+				</div>
+				<a href="<?php echo get_permalink();?>" class="button alert">Mais Informações</a>		
+			</div>
 		</div>
-		<?php endif; ?>
-		<div class="itemContent">
-			<h3><?php the_title(); ?></h3>	
-			<div class="contentIntro">
-		    	<?php the_excerpt(); ?>
-		    </div>
-		    <a href="<?php the_permalink();?>" class="button alert">Leia Mais</a>		
-		</div>
-	</div>
 	<?php 
 		endwhile;
 	endif; 
-	if (function_exists('wp_pagenavi'))
-		wp_pagenavi();
 	?>
+	</div>
+	<div class="row">
+		<div class="columns small-6 small-centered paginacaoPosts">
+			<?php 
+			$wp_query->max_num_pages = $resSearch->max_num_pages;
+			the_posts_pagination( array(
+					'prev_text' => __( 'Anterior', 'textdomain' ),
+					'next_text' => __( 'Próximo', 'textdomain' )
+				) ); 
+			?>
+		</div>
+	</div>
 </div>
 <?php get_footer(); ?>

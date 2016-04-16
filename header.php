@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>?<?php echo rand(0,9999)?>">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>
 </head>
 <body <?php echo body_class(); ?>>
@@ -32,7 +33,7 @@
 								'menu_class' => 'menu vertical', 
 								'theme_location' => 'menu-site',
 								'items_wrap' => '<ul id="%1$s" class="%2$s" data-drilldown data-back-button="<li class=js-drilldown-back><a><strong>Voltar</strong></a></li>">%3$s</ul>',
-								'walker' => new My_Walker_Nav_Menu_offCanvas);
+								'walker' => new My_Walker_Nav_Menu_offCanvas() );
 				wp_nav_menu( $argsMenuOffCanvas ); 
 			}
 			?>
@@ -51,7 +52,7 @@
 											'menu_class' => 'menu horizontal medium-text-center', 
 											'theme_location' => 'menu-site',
 											'items_wrap' => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
-											'walker' => new My_Walker_Nav_Menu);
+											'walker' => new My_Walker_Nav_Menu() );
 							wp_nav_menu( $argsMenu ); 
 						}
 						?>
