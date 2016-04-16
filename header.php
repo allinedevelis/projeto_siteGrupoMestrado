@@ -39,6 +39,27 @@
 		</div>
 		<div class="off-canvas-content" data-off-canvas-content>
 			<header>
+				<div class="hide-for-small-only" data-sticky-container>
+					<div class="sticky" data-sticky data-margin-top="0">
+						<?php
+						if ( has_nav_menu( 'menu-site' ) ) { 
+							$argsMenu = array(
+											'container' => 'nav',
+											'container_id' => 'mainMenu',
+											'container_class' => 'top-bar',
+											'menu_id' => '', 
+											'menu_class' => 'menu horizontal medium-text-center', 
+											'theme_location' => 'menu-site',
+											'items_wrap' => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+											'walker' => new My_Walker_Nav_Menu);
+							wp_nav_menu( $argsMenu ); 
+						}
+						?>
+						<div class="searchContent">
+							<?php get_search_form(); ?>
+						</div>
+					</div>
+				</div>
 				<div id="searchBar" class="row expanded"  data-equalizer data-equalize-on="medium">
 					<div class="columns medium-9 large-8 show-for-medium">
 						<div class="row">
@@ -66,9 +87,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="columns small-12 medium-3 large-4 searchForm" data-equalizer-watch>
-						<div><?php get_search_form(); ?>
-						</div>
+					<div class="hide-for-medium columns small-12 medium-3 large-4 searchForm" data-equalizer-watch>
+						<div><?php get_search_form(); ?></div>
 					</div>
 				</div>
 
@@ -85,21 +105,3 @@
 					</div>
 				</div>
 			</header>
-			<div class="hide-for-small-only" data-sticky-container>
-					<div class="sticky" data-sticky data-margin-top="0" data-top-anchor="anchortop" data-btm-anchor="anchorbottom">
-						<?php
-						if ( has_nav_menu( 'menu-site' ) ) { 
-							$argsMenu = array(
-											'container' => 'nav',
-											'container_id' => 'mainMenu',
-											'container_class' => 'top-bar',
-											'menu_id' => '', 
-											'menu_class' => 'menu horizontal expanded medium-text-center', 
-											'theme_location' => 'menu-site',
-											'items_wrap' => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
-											'walker' => new My_Walker_Nav_Menu);
-							wp_nav_menu( $argsMenu ); 
-						}
-						?>
-					</div>
-				</div>

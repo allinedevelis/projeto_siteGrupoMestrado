@@ -21,61 +21,105 @@ $resTeses 				= new WP_Query($argsTeses);
 	<h2><?php echo single_cat_title(); ?></h2>
 	<?php 
 	if ($resArtigosCongressos->have_posts()) : ?>
-		<h3>Artigos - Congressos</h3>
-		<div class="item contentPublicacoes">	
-		<?php while ($resArtigosCongressos->have_posts()) : $resArtigosCongressos->the_post(); ?>
-			<div class="artigos">
-				<h4>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title(); ?></a>
-				</h4>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_excerpt(); ?></a>
+		<div class="row contentPublicacoes">	
+			<h3>Artigos - Congressos</h3>
+		<?php while ($resArtigosCongressos->have_posts()) : 
+				$resArtigosCongressos->the_post(); 
+				$currentPost 	= ($resArtigosCongressos->current_post + 1);
+				$end 			= ($currentPost == $resArtigosCongressos->found_posts) ? 'end' : '';
+		?>
+			<div class="columns small-12 medium-6 large-4 <?php echo $end;?>">
+				<?php if (has_post_thumbnail()) : ?>
+				<div class="itemImg">
+					<a href="<?php echo get_permalink();?>" title="<?php the_title();?>">
+						<?php the_post_thumbnail('thumb-category'); ?>
+					</a>
+				</div>
+			<?php endif; ?>
+				<h4><a href="<?php echo get_permalink();?>"><?php the_title();?></a></h4>
 			</div>
-		<?php endwhile; ?>
+		<?php endwhile; 
+		if ($resArtigosCongressos->found_posts > 3) : ?>
+			<a href="<?php echo get_bloginfo('url')?>/publicacoes/artigos-congressos/" class="button alert small float-right">Ver todos</a>
+		<?php endif; ?>
 		</div>
 	<?php endif; ?>
 
 	<?php 
 	if ($resArtigosRevistas->have_posts()) : ?>
-		<h3>Artigos - Revistas</h3>
-		<div class="item contentPublicacoes">	
-		<?php while ($resArtigosRevistas->have_posts()) : $resArtigosRevistas->the_post(); ?>
-			<div class="artigos">
-				<h4>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title(); ?></a>
-				</h4>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_excerpt(); ?></a>
+		<div class="row contentPublicacoes">	
+			<h3>Artigos - Revistas</h3>
+		<?php while ($resArtigosRevistas->have_posts()) : 
+				$resArtigosRevistas->the_post(); 
+				$currentPost 	= ($resArtigosRevistas->current_post + 1);
+				$end 			= ($currentPost == $resArtigosRevistas->found_posts) ? 'end' : '';
+		?>
+			<div class="columns small-12 medium-6 large-4 <?php echo $end;?>">
+				<?php if (has_post_thumbnail()) : ?>
+				<div class="itemImg">
+					<a href="<?php echo get_permalink();?>" title="<?php the_title();?>">
+						<?php the_post_thumbnail('thumb-category'); ?>
+					</a>
+				</div>
+			<?php endif; ?>
+				<h4><a href="<?php echo get_permalink();?>"><?php the_title();?></a></h4>
 			</div>
-		<?php endwhile; ?>
+		<?php endwhile; 
+		if ($resArtigosRevistas->found_posts > 3) : ?>
+			<a href="<?php echo get_bloginfo('url')?>/publicacoes/artigos-revistas/" class="button alert small float-right">Ver todos</a>
+		<?php endif; ?>
 		</div>
 	<?php endif; ?>
 
 	<?php 
 	if ($resDissertacoes->have_posts()) : ?>
-		<h3>Dissertações</h3>
-		<div class="item contentPublicacoes">	
-		<?php while ($resDissertacoes->have_posts()) : $resDissertacoes->the_post(); ?>
-			<div class="artigos">
-				<h4>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title(); ?></a>
-				</h4>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_excerpt(); ?></a>
+		<div class="row contentPublicacoes">
+			<h3>Dissertações</h3>	
+		<?php while ($resDissertacoes->have_posts()) : 
+				$resDissertacoes->the_post(); 
+				$currentPost 	= ($resDissertacoes->current_post + 1);
+				$end 			= ($currentPost == $resDissertacoes->found_posts) ? 'end' : '';
+		?>
+			<div class="columns small-12 medium-6 large-4 <?php echo $end;?>">
+				<?php if (has_post_thumbnail()) : ?>
+				<div class="itemImg">
+					<a href="<?php echo get_permalink();?>" title="<?php the_title();?>">
+						<?php the_post_thumbnail('thumb-category'); ?>
+					</a>
+				</div>
+			<?php endif; ?>
+				<h4><a href="<?php echo get_permalink();?>"><?php the_title();?></a></h4>
 			</div>
-		<?php endwhile; ?>
+		<?php endwhile; 
+		if ($resDissertacoes->found_posts > 3) : ?>
+			<a href="<?php echo get_bloginfo('url')?>/publicacoes/dissertacoes/" class="button alert small float-right">Ver todos</a>
+		<?php endif; ?>
 		</div>
 	<?php endif; ?>
 
 	<?php 
 	if ($resTeses->have_posts()) : ?>
-		<h3>Teses</h3>
-		<div class="item contentPublicacoes">	
-		<?php while ($resTeses->have_posts()) : $resTeses->the_post(); ?>
-			<div class="artigos">
-				<h4>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title(); ?></a>
-				</h4>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_excerpt(); ?></a>
+		<div class="row contentPublicacoes">	
+			<h3>Teses</h3>
+		<?php while ($resTeses->have_posts()) : 
+				$resTeses->the_post(); 
+				$currentPost 	= ($resTeses->current_post + 1);
+				$end 			= ($currentPost == $resTeses->found_posts) ? 'end' : '';
+		?>
+			<div class="columns small-12 medium-6 large-4 <?php echo $end;?>">
+				<?php if (has_post_thumbnail()) : ?>
+				<div class="itemImg">
+					<a href="<?php echo get_permalink();?>" title="<?php the_title();?>">
+						<?php the_post_thumbnail('thumb-category'); ?>
+					</a>
+				</div>
+			<?php endif; ?>
+				<h4><a href="<?php echo get_permalink();?>"><?php the_title();?></a></h4>
 			</div>
-		<?php endwhile; ?>
+		<?php endwhile; 
+		if ($resTeses->found_posts > 3) : ?>
+			<a href="<?php echo get_bloginfo('url')?>/publicacoes/teses/" class="button alert small float-right">Ver todos</a>
+		<?php endif; ?>
 		</div>
 	<?php endif; ?>	
 </div>

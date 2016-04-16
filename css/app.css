@@ -7,6 +7,11 @@
     position: absolute;
     top: 0;
 }
+.searchContent{
+	float: right;
+    margin: 7px 8px 7px 0;
+    width: 30%;
+}
 .fa-search{
     color: #444;
     font-size: 1.125em !important;
