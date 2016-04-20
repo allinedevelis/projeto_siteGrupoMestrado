@@ -24,7 +24,7 @@
 		<div class="off-canvas position-left" id="offCanvas" data-off-canvas>
 			<div class="closeMenu text-right">
 				<button aria-label="Close menu" type="button" id="closeBtn" data-close>
-					<i class="fa fa-times"></i>
+					<i class="fa fa-times-circle" aria-hidden="true"></i>
 				</button>
 			</div>
 			<?php 
@@ -91,15 +91,14 @@
 				</div>
 
 				<div class="row expanded" id="boxLogos">
-					<h1 class="small-6 medium-4 columns">
+					<h1 class="small-12 medium-4 columns">
 						<img src="<?php bloginfo('template_url')?>/img/logoGMMS.png" alt="Logo GMMS" class="float-center">
 					</h1>
 					<div class="medium-4 columns show-for-medium">
-						<img src="http://placehold.it/450x183&text=LOGO" alt="company logo" class="float-center">			
-					</div>
-					<div class="small-6 medium-4 columns">
-
 						<img src="<?php bloginfo('template_url')?>/img/logoUnesp.png" alt="Logo UNESP" class="float-center">
+					</div>
+					<div class="small-6 medium-4 columns show-for-medium" id="logoFEB">
+						<img src="<?php bloginfo('template_url')?>/img/logoFEB.png" alt="Logo FEB" class="float-center">
 					</div>
 				</div>
 			</header>

@@ -15,14 +15,15 @@
 					</div>
 					<div class="columns medium-6 medium-text-right" data-equalizer-watch>
 						<div class="row">
-							<div class="columns medium-6">
+							<div class="columns medium-7">
 								<p>
-								<strong>FEB - Faculdade de Engenharia</strong><br/>
+								<strong>FEB - Faculdade de Engenharia de Bauru</strong><br/>
+								Departamento de Engenharia Civil e Ambiental<br/>
 								Av. Eng. Luiz Edmundo C. Coube 14-01<br/>
 								Bairro: Vargem Limpa
 								</p>
 							</div>
-							<div class="columns medium-6">
+							<div class="columns medium-5">
 								<p>CEP 17033-360 <br/> 
 								Bauru - SP<br/>
 								Telefone: (14) 3103-6000</p>	

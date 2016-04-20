@@ -108,11 +108,13 @@ h1, h2, h3, h4, h5, h6{
 }
 div#boxLogos {
     margin: 0 auto;
-    background-color: #e8eaea;
     padding: 20px;
 }
 #boxLogos img{
 	max-width: 70%;
+}
+#boxLogos #logoFEB{
+	margin-top: 25px;
 }
 
 /**
@@ -123,21 +125,40 @@ div#boxLogos {
 	width: 100%;
 	z-index: 2;
 }
+.is-stuck #mainMenu {
+    border-bottom: 1px solid #000;
+}
 #mainMenu{
 	float: left;
 	font-family: 'Oxygen', sans-serif;
 }
 #mainMenu, #mainMenu ul, .sticky, .sticky-container{
-	background-color: #E43107;
+	background-color: #FFF;
 }
 #mainMenu > ul{
 	position: relative;
 }
+#mainMenu > ul > li {
+	border-right: 1px solid #000;
+}
+#mainMenu > ul > li:last-child, #menuOffCanvas li:last-child{
+	border-bottom: none;
+	border-right: none;
+}
+#mainMenu ul li > a{
+	color: #000;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+#mainMenu .is-dropdown-submenu-parent li > a{
+	font-size: 0.9375em;
+}
 #mainMenu .is-dropdown-submenu-parent.is-down-arrow > a::after{
-	border-color: #FFF rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+	border-color: #000 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+	right: 20px;
 }
 #mainMenu .is-dropdown-submenu{
-	top: 40px;
+	top: 45px;
 	left: 15%;
 	border: none;
 }
@@ -147,24 +168,32 @@ div#boxLogos {
 */
 
 #menuOffCanvas .is-drilldown-submenu-parent > a::after{
-	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #FFF;
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #000;
 }
 #menuOffCanvas .is-drilldown-submenu .js-drilldown-back > a::before{
-	border-color: rgba(0, 0, 0, 0) #FFF rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+	border-color: rgba(0, 0, 0, 0) #000 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+}
+#menuOffCanvas li {
+    border-bottom: 1px solid #000;
+    padding: 4px 0;
 }
 ul#menuOffCanvas > li a {
-    color: #FFF;
+    color: #000;
+    font-weight: bold;
 }
 #offCanvas, #menuOffCanvas, #menuOffCanvas .is-drilldown-submenu{
-	background-color: #0a0a0a;
+	background-color: #FFF;
 	height: 100%;
 }
 .closeMenu {
 	color: #FFF;
 	font-size: 1.5625em;
 }
-.closeMenu .fa-times{
+.closeMenu .fa-times-circle{
 	padding-right: 10px;
+}
+.closeMenu .fa-times-circle::before{
+	color: #000;
 }
 
 /**
@@ -241,7 +270,7 @@ div.content {
 #contentCategory h2{
     margin-bottom: 20px;
 }
-.contentIntro p {
+#contentCategory .contentIntro p, #pageSearch .contentIntro p {
     max-height: 150px;
     overflow: hidden;
 }
@@ -275,7 +304,6 @@ div.content {
 }
 #pageSearch .resultSearch {
     margin-top: 20px;
-    display: inline-block;
 }
 #pageSearch .resultSearch .button{
 	margin-bottom: 0;
@@ -306,6 +334,9 @@ div.content {
 @media screen and (max-width: 39.9375em) {
 	#searchBar div.contato {
 		border-left: none;
+	}
+	#boxLogos img {
+	    max-width: 50%;
 	}
 }
 

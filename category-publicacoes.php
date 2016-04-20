@@ -18,6 +18,9 @@ $resTeses 				= new WP_Query($argsTeses);
 ?>
 <br class="show-for-medium">
 <div class="row columns content" id="contentCategory">
+	<?php if ( function_exists('yoast_breadcrumb') ){
+		yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+	} ?>
 	<h2><?php echo single_cat_title(); ?></h2>
 	<?php 
 	if ($resArtigosCongressos->have_posts()) : ?>

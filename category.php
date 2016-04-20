@@ -9,6 +9,9 @@ $resPosts = new WP_Query($argsCategoria);
 ?>
 <br class="show-for-medium">
 <div class="row content" data-equalizer data-equalize-on="medium" id="contentCategory">
+	<?php if ( function_exists('yoast_breadcrumb') ){
+		yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+	} ?>
 	<h2><?php echo single_cat_title(); ?></h2>
 	<?php if ($resPosts->have_posts()) : while ($resPosts->have_posts()) : $resPosts->the_post(); 
 		$currentPost 	= ($resPosts->current_post + 1);
